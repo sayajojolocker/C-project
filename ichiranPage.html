@@ -26,7 +26,7 @@
               <a class="nav-link" href="hyouziPage.html">テスト表示</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
+              <a class="nav-link" data-toggle="modal" data-target="#myModal" href="#">Upload</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="http://example.com" id="category" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Category</a>
@@ -56,8 +56,146 @@
           <form class="form-inline my-2 my-md-0">
             <input class="form-control" type="text" placeholder="Search" aria-label="Search">
           </form>
+          <button type="button" class="btn btn-outline-info search">Search</button>
         </div>
       </nav>
-       </div> 
+      
+
+      <div class="album py-5 bg-light">
+        <div class="container">
+      <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="picture\sample.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a class="btn btn-sm btn-outline-secondary" href="hyouziPage.html" role="button">View</a>
+                      <a class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#myModal" href="#">Edit</a>
+                    </div>
+                    
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="picture\sample.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="picture\sample.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <!-- モーダルの設定 -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Upload</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- ファイル入力フォーム -->
+            <form>
+              <div class="form-group row">
+                <label for="staticPicture" class="col-sm-3 col-form-label">サムネイルを選択</label>
+                <div class="col-sm-9">
+                  <input type="file" class="form-control-file" id="staticPicture">
+                </div>
+              </div>
+            </form>
+            <div>
+              <form>
+                <div class="form-group row">
+                  <label for="staticTitle" class="col-sm-3 col-form-label">Title</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="staticTitle" value="">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="staticRecommend" class="col-sm-3 col-form-label">Recommend</label>
+                  <div class="col-sm-9">
+                    <select class="custom-select" id="staticRecommend" required>
+                      <option>☆</option>
+                      <option>☆☆</option>
+                      <option>☆☆☆</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid recommend.
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="staticCategory" class="col-sm-3 col-form-label">Category</label>
+                  <div class="col-sm-9">
+                    <select class="custom-select" id="staticCategory" required>
+                      <option>Novel</option>
+                      <option>Movie</option>
+                      <option>Food</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid recommend.
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="staticCategory" class="col-sm-3 col-form-label">Sub-Categorys</label>
+                  <div class="col-sm-9">
+                    <select class="custom-select" id="staticCategory" required>
+                      <option>Action</option>
+                      <option>Fantasy</option>
+                      <option>Mystery</option>
+                    </select>
+                  <div class="invalid-feedback">
+                     Please select a valid recommend.
+                  </div>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="staticComment" class="col-sm-3 col-form-label">Comments</label>
+                  <div class="col-sm-9">
+                    <textarea class="form-control" id="staticComment" rows="3"></textarea>
+                  </div>
+                </div>
+            </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+            <button type="button" class="btn btn-primary" id="upload">登録</button>
+          </div><!-- /.modal-footer -->
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 </body>
 </html>
